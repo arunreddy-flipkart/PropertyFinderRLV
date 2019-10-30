@@ -22,7 +22,7 @@ class SearchResults extends React.Component {
       return r1 !== r2
     });
     this.layoutProvider = new LayoutProvider((i) => {
-      return i.toString();
+      return 'ITEM';
     }, (type,dim) => {
       switch(type) {
         default:
