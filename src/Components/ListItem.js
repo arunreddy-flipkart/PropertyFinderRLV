@@ -11,12 +11,9 @@ import {
 const width = Dimensions.get('window').width;
 
 class ListItem extends React.PureComponent {
-    
-  onPress = () => {
-    this.props.onPressItem(this.props.index);
-  }
 
-  render() {
+  constructor(props) {
+    super(props);
     const item = this.props.item;
     let title = item.title;
     let e = Math.random();
@@ -26,7 +23,16 @@ class ListItem extends React.PureComponent {
     } else if(e>0.7) {
       title = title.concat(title.concat(title.concat(title)));
     }
-    const price = item.price_formatted.split(' ')[0];
+    this.title = title;
+    this.price = item.price_formatted.split(' ')[0];
+    this.item = item;
+  }
+    
+  onPress = () => {
+    this.props.onPressItem(this.props.index);
+  }
+
+  render() {
     return (
       /*<Text style={styles.price}>{'Welcome to Index '+this.props.index}</Text>*/
       <TouchableHighlight
@@ -35,13 +41,13 @@ class ListItem extends React.PureComponent {
         <View>
           <View style={styles.rowContainer}>
             <View style={styles.imageContainer}>
-              <Image style={styles.thumb} source={{ uri: item.img_url }} />
+              <Image style={styles.thumb} source={{ uri: this.item.img_url }} />
             </View>
             <View style={styles.textContainer}>
-              <Text style={styles.price}>{price}</Text>
+              <Text style={styles.price}>{this.price}</Text>
               <View style={styles.titleContainer}>
                 <Text style={styles.title}
-                   >{title}</Text>
+                   >{this.title}</Text>
               </View>
             </View>
           </View>
