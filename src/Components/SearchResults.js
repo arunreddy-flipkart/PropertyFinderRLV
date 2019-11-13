@@ -91,13 +91,21 @@ class SearchResults extends React.Component {
   };
 
   renderItem = (type, item, index) => {
-      return (
-        <ListItem
-          item={item}
-          index={index}
-          onPressItem={this.onPressItem}
-        />
-      );
+    let title = item.title;
+    let e = Math.random();
+    if(e<0.3) {
+      title = title.concat(title.concat(title));
+    } else if(e>0.7) {
+      title = title.concat(title.concat(title.concat(title)));
+    }
+    item.title = title;
+    return (
+      <ListItem
+        item={item}
+        index={index}
+        onPressItem={this.onPressItem}
+      />
+    );
   };
 
   renderFooter = () => {
@@ -132,6 +140,7 @@ class SearchResults extends React.Component {
               layoutProvider={this.layoutProvider}
               itemAnimator={this.itemAnimator}
               forceNonDeterministicRendering={true}
+              removeNonDeterministicShifting={true}
               renderFooter={renderFooter}
             />
         </View>

@@ -15,17 +15,7 @@ class ListItem extends React.PureComponent {
   constructor(props) {
     super(props);
     const item = this.props.item;
-    let title = item.title;
-    let e = Math.random();
-    //console.log('Rendered index '+this.props.index);
-    if(e<0.3) {
-      title = title.concat(title.concat(title));
-    } else if(e>0.7) {
-      title = title.concat(title.concat(title.concat(title)));
-    }
-    this.title = title;
-    this.price = item.price_formatted.split(' ')[0];
-    this.item = item;
+    
   }
     
   onPress = () => {
@@ -41,13 +31,13 @@ class ListItem extends React.PureComponent {
         <View>
           <View style={styles.rowContainer}>
             <View style={styles.imageContainer}>
-              <Image style={styles.thumb} source={{ uri: this.item.img_url }} />
+              <Image style={styles.thumb} source={{ uri: this.props.item.img_url }} />
             </View>
             <View style={styles.textContainer}>
-              <Text style={styles.price}>{this.price}</Text>
+              <Text style={styles.price}>{this.props.item.price_formatted.split(' ')[0]}</Text>
               <View style={styles.titleContainer}>
                 <Text style={styles.title}
-                   >{this.title}</Text>
+                   >{this.props.item.title}</Text>
               </View>
             </View>
           </View>
