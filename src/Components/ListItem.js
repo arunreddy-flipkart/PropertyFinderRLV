@@ -11,12 +11,6 @@ import {
 const width = Dimensions.get('window').width;
 
 class ListItem extends React.PureComponent {
-
-  constructor(props) {
-    super(props);
-    const item = this.props.item;
-    
-  }
     
   onPress = () => {
     this.props.onPressItem(this.props.index);
