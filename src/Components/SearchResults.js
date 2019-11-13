@@ -18,6 +18,14 @@ class SearchResults extends React.Component {
   constructor(props) {
     super(props);
     let data = this.props.navigation.getParam('listings', []);
+    for (let i=0;i<data.length;i++) {
+      let title = data[i].title;
+      let e = Math.random();
+      if(e<0.5) {
+        title = title.concat(title)
+      }
+      data[i].title = title;
+    }
     let dataProvider = new DataProvider((r1,r2) => {
       return r1 !== r2
     });
@@ -51,7 +59,20 @@ class SearchResults extends React.Component {
       listings = response.listings;
       console.log('Properties found: ' + listings.length);
       while(listings.length<=100) {
-        listings = listings.concat(listings);
+        let count = listings.length;
+        for(i=0;i<count;i++) {
+          listings.push(JSON.parse(JSON.stringify(listings[i])));
+        }
+      }
+      for (let item of listings) {
+        let title = item.title;
+        let e = Math.random();
+        if(e<0.3) {
+          title = title.concat(title)
+        } else if(e>0.7) {
+          title = title.concat(title.concat(title));
+        }
+        item.title = title;
       }
       this.setState({
         isLoading: false,
@@ -91,14 +112,6 @@ class SearchResults extends React.Component {
   };
 
   renderItem = (type, item, index) => {
-    let title = item.title;
-    let e = Math.random();
-    if(e<0.3) {
-      title = title.concat(title.concat(title));
-    } else if(e>0.7) {
-      title = title.concat(title.concat(title.concat(title)));
-    }
-    item.title = title;
     return (
       <ListItem
         item={item}

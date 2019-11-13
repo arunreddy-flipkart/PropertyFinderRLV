@@ -36,7 +36,10 @@ class SearchPage extends React.Component {
       listings = response.listings;
       console.log('Properties found: ' + listings.length);
       while(listings.length<=100) {
-        listings = listings.concat(listings);
+        let count = listings.length;
+        for(i=0;i<count;i++) {
+          listings.push(JSON.parse(JSON.stringify(listings[i])));
+        }
       }
       this.props.navigation.navigate('Results', {
         listings: listings,
