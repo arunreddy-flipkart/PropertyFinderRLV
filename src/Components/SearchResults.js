@@ -51,7 +51,7 @@ class SearchResults extends React.Component {
     if (response.application_response_code.substr(0, 1) === '1') {
       listings = response.listings;
       console.log('Properties found: ' + listings.length);
-      while(listings.length<=100) {
+      while(listings.length<=1000) {
         let count = listings.length;
         for(i=0;i<count;i++) {
           listings.push(JSON.parse(JSON.stringify(listings[i])));
@@ -75,8 +75,10 @@ class SearchResults extends React.Component {
     for (let item of data) {
       let title = item.title;
       let e = Math.random();
-      if(e<0.5) {
-        title = title.concat(title)
+      if(e<0.3) {
+        title = title.concat(title);
+      } else if(e>0.7) {
+        title = title.concat(title.concat(title));
       }
       item.title = title;
     }

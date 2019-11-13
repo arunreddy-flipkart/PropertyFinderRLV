@@ -35,7 +35,7 @@ class SearchPage extends React.Component {
     if (response.application_response_code.substr(0, 1) === '1') {
       listings = response.listings;
       console.log('Properties found: ' + listings.length);
-      while(listings.length<=100) {
+      while(listings.length<=1000) {
         let count = listings.length;
         for(i=0;i<count;i++) {
           listings.push(JSON.parse(JSON.stringify(listings[i])));
