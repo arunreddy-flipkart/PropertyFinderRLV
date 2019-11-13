@@ -18,14 +18,7 @@ class SearchResults extends React.Component {
   constructor(props) {
     super(props);
     let data = this.props.navigation.getParam('listings', []);
-    for (let i=0;i<data.length;i++) {
-      let title = data[i].title;
-      let e = Math.random();
-      if(e<0.5) {
-        title = title.concat(title)
-      }
-      data[i].title = title;
-    }
+    data = this.mockData(data);
     let dataProvider = new DataProvider((r1,r2) => {
       return r1 !== r2
     });
@@ -64,16 +57,7 @@ class SearchResults extends React.Component {
           listings.push(JSON.parse(JSON.stringify(listings[i])));
         }
       }
-      for (let item of listings) {
-        let title = item.title;
-        let e = Math.random();
-        if(e<0.3) {
-          title = title.concat(title)
-        } else if(e>0.7) {
-          title = title.concat(title.concat(title));
-        }
-        item.title = title;
-      }
+      listings = this.mockData(listings);
       this.setState({
         isLoading: false,
         message: '',
@@ -85,6 +69,18 @@ class SearchResults extends React.Component {
         message: 'Location not recognized; please try again.'
       });
     }
+  }
+
+  mockData = (data) => {
+    for (let item of data) {
+      let title = item.title;
+      let e = Math.random();
+      if(e<0.5) {
+        title = title.concat(title)
+      }
+      item.title = title;
+    }
+    return data;
   }
 
   makeApiCall = (query) => {
