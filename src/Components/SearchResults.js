@@ -74,12 +74,12 @@ class SearchResults extends React.Component {
   mockData = (data) => {
     for (let item of data) {
       let title = item.title;
-      let e = Math.random();
+      /*let e = Math.random();
       if(e<0.3) {
         title = title.concat(title);
       } else if(e>0.7) {
         title = title.concat(title.concat(title));
-      }
+      }*/
       item.title = title;
     }
     return data;
@@ -149,7 +149,6 @@ class SearchResults extends React.Component {
               rowRenderer={this.renderItem}
               dataProvider={this.state.dataProvider}
               layoutProvider={this.layoutProvider}
-              itemAnimator={this.itemAnimator}
               forceNonDeterministicRendering={true}
               removeNonDeterministicShifting={true}
               renderFooter={renderFooter}
