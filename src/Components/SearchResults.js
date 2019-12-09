@@ -10,6 +10,7 @@ import {
 } from 'react-native';
 import {RecyclerListView, LayoutProvider, DataProvider, BaseItemAnimator, BaseLayoutProvider } from 'recyclerlistview';
 import ListItem from './ListItem';
+import FlexView from './FlexView';
 import getApi from '../API/PropertyAPI';
 const {height, width} = Dimensions.get('window');
 
@@ -150,7 +151,8 @@ class SearchResults extends React.Component {
               dataProvider={this.state.dataProvider}
               layoutProvider={this.layoutProvider}
               forceNonDeterministicRendering={true}
-              removeNonDeterministicShifting={true}
+              itemContainer={FlexView}
+              itemContainerProps={{ isHorizontal : false }}
               renderFooter={renderFooter}
             />
         </View>
