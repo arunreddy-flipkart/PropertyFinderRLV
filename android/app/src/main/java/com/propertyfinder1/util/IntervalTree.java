@@ -63,14 +63,14 @@ public class IntervalTree {
                 overlappingIntervals.add(currentInterval);
                 search(node.getRight(), searchInterval, overlappingIntervals);
             } else if (cmp < 0) {
-                overlappingIntervals.add(currentInterval);
-                search(node.getRight(), searchInterval, overlappingIntervals);
-            } else {
                 search(node.getLeft(), searchInterval, overlappingIntervals);
                 overlappingIntervals.add(currentInterval);
+            } else {
+                overlappingIntervals.add(currentInterval);
+                search(node.getRight(), searchInterval, overlappingIntervals);
             }
         } else {
-            if(cmp < 0) {
+            if (cmp < 0) {
                 search(node.getLeft(), searchInterval, overlappingIntervals);
             } else {
                 search(node.getRight(), searchInterval, overlappingIntervals);

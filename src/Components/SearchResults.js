@@ -127,7 +127,7 @@ class SearchResults extends React.Component {
   }
 
   render() {
-    let renderFooter = this.state.dataProvider.getSize()===0 ? this.renderFooter : null;
+    let renderFooter = this.state.dataProvider.getSize() === 0 ? this.renderFooter : null;
     return (
       <View style={styles.rootContainer}>
         <View style={styles.flowRight}>

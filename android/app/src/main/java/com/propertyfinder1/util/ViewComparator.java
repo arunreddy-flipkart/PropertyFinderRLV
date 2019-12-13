@@ -16,8 +16,14 @@ public class ViewComparator implements Comparator<View> {
     @Override
     public int compare(View a, View b) {
         if (isHorizontal) {
+            if (a.getLeft() == b.getLeft()) {
+                return a.getRight() - b.getRight();
+            }
             return a.getLeft() - b.getLeft();
         } else {
+            if (a.getTop() == b.getTop()) {
+                return a.getBottom() - b.getBottom();
+            }
             return a.getTop() - b.getTop();
         }
     }

@@ -1,6 +1,7 @@
 package com.propertyfinder1;
 
 import android.content.Context;
+import android.graphics.Canvas;
 import android.util.Log;
 import android.view.View;
 import java.util.ArrayList;
@@ -17,6 +18,7 @@ public class FlexView extends ReactViewGroup {
     public FlexView(Context context) {
         super(context);
         this.isHorizontal = false;
+        this.setWillNotDraw(false);
     }
 
     public void setFlexDirection(boolean isHorizontal) {
@@ -26,16 +28,18 @@ public class FlexView extends ReactViewGroup {
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
-        //Log.d("MEASURE", "Width: "+MeasureSpec.toString(widthMeasureSpec));
-        //Log.d("MEASURE", "Height: "+MeasureSpec.toString(heightMeasureSpec));
+        Log.d("MEASURE", "on Measure is called");
     }
 
     @Override
     protected void onLayout(boolean b, int left, int top, int right, int bottom) {
         super.onLayout(b, left, top, right, bottom);
-        Log.d("MEASURE","Layout of FlexView Width: "+getWidth()+" Height: "+getHeight()+" Top: "+getTop());
+    }
+
+    @Override
+    protected void onDraw(Canvas canvas) {
         int count = getChildCount();
-        FlexViewLayouter flexViewLayouter = new FlexViewLayouter();
+        FlexViewLayouter flexViewLayouter = new FlexViewLayouter(isHorizontal);
         ArrayList<View> views = new ArrayList<>();
         for (int i = 0; i < count; i++) {
             final View child = getChildAt(i);
@@ -45,24 +49,12 @@ public class FlexView extends ReactViewGroup {
 
         for (int i = 0; i < count; i++) {
             final View child = views.get(i);
-            if (child.getVisibility() != GONE) {
-                if (isHorizontal) {
-                    int estimatedPosition = child.getLeft();
-                    int width = child.getWidth();
-                    //Log.d("MEASURE", "Layout: Width: "+child.getWidth()+" Original Left: "+estimatedPosition);
-                    int correctedPosition = flexViewLayouter.layout(child.getTop(), child.getBottom(), estimatedPosition, width);
-                    child.layout(correctedPosition, child.getTop(), correctedPosition + width, child.getBottom());
-                    //Log.d("MEASURE", "Layout: Width: "+child.getWidth()+" Corrected Left: "+correctedPosition);
-                } else {
-                    int estimatedPosition = child.getTop();
-                    int height = child.getHeight();
-                    //Log.d("MEASURE", "Index: "+i+" Layout: Height: "+child.getHeight()+" Original Top: "+estimatedPosition);
-                    int correctedPosition = flexViewLayouter.layout(child.getLeft(), child.getRight(), estimatedPosition, height);
-                    child.layout(child.getLeft(), correctedPosition, child.getRight(), correctedPosition + height);
-                    //Log.d("MEASURE", "Index: "+i+" Layout: Height: "+child.getHeight()+" Corrected Top: "+correctedPosition);
-                }
-            }
+            //Log.d("MEASURE", "Item "+i+" Layout: Original Top: "+child.getTop()+" Height: "+child.getHeight());
+            flexViewLayouter.layout(child);
+            //Log.d("MEASURE", "Item "+i+" Layout: Corrected Top: "+child.getTop()+" Height: "+child.getHeight());
         }
+        //Log.d("MEASURE", "END");
+        super.onDraw(canvas);
     }
 }
 
