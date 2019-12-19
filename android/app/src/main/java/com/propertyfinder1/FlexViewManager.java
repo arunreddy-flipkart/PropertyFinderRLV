@@ -1,9 +1,5 @@
 package com.propertyfinder1;
 
-import android.view.View;
-
-import androidx.annotation.NonNull;
-
 import com.facebook.react.uimanager.ThemedReactContext;
 import com.facebook.react.uimanager.ViewGroupManager;
 import com.facebook.react.uimanager.annotations.ReactProp;
@@ -11,22 +7,20 @@ import com.facebook.react.uimanager.annotations.ReactProp;
 public class FlexViewManager extends ViewGroupManager {
 
     public static final String REACT_CLASS = "FlexView";
-    @NonNull
+    public static final String PROP_HORIZONTAL = "horizontal";
+
     @Override
     public String getName() {
         return REACT_CLASS;
     }
 
-    @NonNull
     @Override
-    protected View createViewInstance(@NonNull ThemedReactContext reactContext) {
-        FlexView flexView = new FlexView(reactContext);
-        return flexView;
+    protected FlexView createViewInstance(ThemedReactContext reactContext) {
+        return new FlexView(reactContext);
     }
 
-    @ReactProp(name="isHorizontal",defaultBoolean = false)
-    public void setFlexDirection(FlexView flexView, boolean isHorizontal) {
-        flexView.setFlexDirection(isHorizontal);
+    @ReactProp(name=PROP_HORIZONTAL, defaultBoolean = false)
+    public void setHorizontal(FlexView flexView, boolean isHorizontal) {
+        flexView.setHorizontal(isHorizontal);
     }
-
 }

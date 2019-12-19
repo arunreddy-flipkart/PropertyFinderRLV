@@ -4,25 +4,25 @@ import android.view.View;
 import java.util.Comparator;
 
 public class ViewComparator implements Comparator<View> {
-    private boolean isHorizontal;
+    private boolean horizontal;
     public ViewComparator() {
-        this.isHorizontal = false;
+        this.horizontal = false;
     }
 
-    public ViewComparator(boolean isHorizontal) {
-        this.isHorizontal = isHorizontal;
+    public void setHorizontal(boolean horizontal) {
+        this.horizontal = horizontal;
     }
 
     @Override
     public int compare(View a, View b) {
-        if (isHorizontal) {
+        if (horizontal) {
             if (a.getLeft() == b.getLeft()) {
-                return a.getRight() - b.getRight();
+                return a.getTop() - b.getTop();
             }
             return a.getLeft() - b.getLeft();
         } else {
             if (a.getTop() == b.getTop()) {
-                return a.getBottom() - b.getBottom();
+                return a.getLeft() - b.getLeft();
             }
             return a.getTop() - b.getTop();
         }

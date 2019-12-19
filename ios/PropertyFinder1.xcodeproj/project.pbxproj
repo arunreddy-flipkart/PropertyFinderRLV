@@ -17,6 +17,13 @@
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		2D59AEA423AB2FF7003F080C /* Interval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D59AEA323AB2FF7003F080C /* Interval.swift */; };
+		2D59AEA623AB302F003F080C /* FlexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D59AEA523AB302F003F080C /* FlexView.swift */; };
+		2D59AEA923AB40C0003F080C /* IntervalNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D59AEA823AB40C0003F080C /* IntervalNode.swift */; };
+		2D59AEAB23AB40F4003F080C /* IntervalTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D59AEAA23AB40F4003F080C /* IntervalTree.swift */; };
+		2D59AEAD23AB4193003F080C /* FlexViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D59AEAC23AB4193003F080C /* FlexViewManager.swift */; };
+		2D59AEB223AB424E003F080C /* FlexViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D59AEB123AB424E003F080C /* FlexViewManager.m */; };
+		2D59AEB423AB427E003F080C /* FlexViewLayouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D59AEB323AB427E003F080C /* FlexViewLayouter.swift */; };
 		2DCD954D1E0B4F2C00145EB5 /* PropertyFinder1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* PropertyFinder1Tests.m */; };
 		4927C088B6339F28E9735C2A /* libPods-PropertyFinder1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BA677B16747791225EB43091 /* libPods-PropertyFinder1.a */; };
 		B71EFC3423182B606D316837 /* libPods-PropertyFinder1Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 94F1A286CF11C26B61567691 /* libPods-PropertyFinder1Tests.a */; };
@@ -54,6 +61,14 @@
 		290B45F250258BBEC2B490C7 /* Pods-PropertyFinder1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PropertyFinder1.release.xcconfig"; path = "Pods/Target Support Files/Pods-PropertyFinder1/Pods-PropertyFinder1.release.xcconfig"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* PropertyFinder1-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PropertyFinder1-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* PropertyFinder1-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PropertyFinder1-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D59AEA323AB2FF7003F080C /* Interval.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = Interval.swift; sourceTree = "<group>"; };
+		2D59AEA523AB302F003F080C /* FlexView.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = FlexView.swift; sourceTree = "<group>"; };
+		2D59AEA723AB403F003F080C /* PropertyFinder1-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PropertyFinder1-Bridging-Header.h"; sourceTree = "<group>"; };
+		2D59AEA823AB40C0003F080C /* IntervalNode.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = IntervalNode.swift; sourceTree = "<group>"; };
+		2D59AEAA23AB40F4003F080C /* IntervalTree.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = IntervalTree.swift; sourceTree = "<group>"; };
+		2D59AEAC23AB4193003F080C /* FlexViewManager.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = FlexViewManager.swift; sourceTree = "<group>"; };
+		2D59AEB123AB424E003F080C /* FlexViewManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlexViewManager.m; sourceTree = "<group>"; };
+		2D59AEB323AB427E003F080C /* FlexViewLayouter.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = FlexViewLayouter.swift; sourceTree = "<group>"; };
 		2F98BEBB24A43D7CC3385942 /* Pods-PropertyFinder1-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PropertyFinder1-tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-PropertyFinder1-tvOS/Pods-PropertyFinder1-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		677FEBC7201FFA3669EBB306 /* libPods-PropertyFinder1-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PropertyFinder1-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6945149EE6674E74BE98C89A /* Pods-PropertyFinder1Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PropertyFinder1Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PropertyFinder1Tests/Pods-PropertyFinder1Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -125,6 +140,7 @@
 		13B07FAE1A68108700A75B9A /* PropertyFinder1 */ = {
 			isa = PBXGroup;
 			children = (
+				2D59AEA123AB2FC7003F080C /* Util */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -132,6 +148,11 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				2D59AEA723AB403F003F080C /* PropertyFinder1-Bridging-Header.h */,
+				2D59AEAC23AB4193003F080C /* FlexViewManager.swift */,
+				2D59AEB323AB427E003F080C /* FlexViewLayouter.swift */,
+				2D59AEB123AB424E003F080C /* FlexViewManager.m */,
+				2D59AEA523AB302F003F080C /* FlexView.swift */,
 			);
 			name = PropertyFinder1;
 			sourceTree = "<group>";
@@ -147,6 +168,16 @@
 				94F1A286CF11C26B61567691 /* libPods-PropertyFinder1Tests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2D59AEA123AB2FC7003F080C /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				2D59AEA323AB2FF7003F080C /* Interval.swift */,
+				2D59AEA823AB40C0003F080C /* IntervalNode.swift */,
+				2D59AEAA23AB40F4003F080C /* IntervalTree.swift */,
+			);
+			name = Util;
 			sourceTree = "<group>";
 		};
 		55A5BAD4F05DFF23840E61DA /* Pods */ = {
@@ -291,6 +322,9 @@
 						CreatedOnToolsVersion = 6.2;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
+					13B07F861A680F5B00A75B9A = {
+						LastSwiftMigration = 1030;
+					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
@@ -307,6 +341,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -370,7 +405,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
 		069626E0812F11BC8F153C8A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -490,7 +525,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export RCT_METRO_PORT=\"${RCT_METRO_PORT:=8081}\"\necho \"export RCT_METRO_PORT=${RCT_METRO_PORT}\" > \"${SRCROOT}/../node_modules/react-native/scripts/.packager.env\"\nif [ -z \"${RCT_NO_LAUNCH_PACKAGER+xxx}\" ] ; then\n  if nc -w 5 -z localhost ${RCT_METRO_PORT} ; then\n    if ! curl -s \"http://localhost:${RCT_METRO_PORT}/status\" | grep -q \"packager-status:running\" ; then\n      echo \"Port ${RCT_METRO_PORT} already in use, packager is either not running or not running correctly\"\n      exit 2\n    fi\n  else\n    open \"$SRCROOT/../node_modules/react-native/scripts/launchPackager.command\" || echo \"Can't start packager automatically\"\n  fi\nfi\n";
+			shellScript = "export RCT_METRO_PORT=\"${RCT_METRO_PORT:=8082}\"\necho \"export RCT_METRO_PORT=${RCT_METRO_PORT}\" > \"${SRCROOT}/../node_modules/react-native/scripts/.packager.env\"\nif [ -z \"${RCT_NO_LAUNCH_PACKAGER+xxx}\" ] ; then\n  if nc -w 5 -z localhost ${RCT_METRO_PORT} ; then\n    if ! curl -s \"http://localhost:${RCT_METRO_PORT}/status\" | grep -q \"packager-status:running\" ; then\n      echo \"Port ${RCT_METRO_PORT} already in use, packager is either not running or not running correctly\"\n      exit 2\n    fi\n  else\n    open \"$SRCROOT/../node_modules/react-native/scripts/launchPackager.command\" || echo \"Can't start packager automatically\"\n  fi\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F122414F3F0027D42C /* Start Packager */ = {
@@ -527,8 +562,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D59AEA923AB40C0003F080C /* IntervalNode.swift in Sources */,
+				2D59AEB223AB424E003F080C /* FlexViewManager.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				2D59AEA423AB2FF7003F080C /* Interval.swift in Sources */,
+				2D59AEAD23AB4193003F080C /* FlexViewManager.swift in Sources */,
+				2D59AEAB23AB40F4003F080C /* IntervalTree.swift in Sources */,
+				2D59AEA623AB302F003F080C /* FlexView.swift in Sources */,
+				2D59AEB423AB427E003F080C /* FlexViewLayouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -581,6 +623,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6945149EE6674E74BE98C89A /* Pods-PropertyFinder1Tests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -604,6 +647,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B1FC090562F67B07DA5969EC /* Pods-PropertyFinder1Tests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = PropertyFinder1Tests/Info.plist;
@@ -625,6 +669,7 @@
 			baseConfigurationReference = AF665506756D097039415D5D /* Pods-PropertyFinder1.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
 				INFOPLIST_FILE = PropertyFinder1/Info.plist;
@@ -636,6 +681,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = PropertyFinder1;
+				SWIFT_OBJC_BRIDGING_HEADER = "PropertyFinder1-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -645,6 +693,7 @@
 			baseConfigurationReference = 290B45F250258BBEC2B490C7 /* Pods-PropertyFinder1.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				INFOPLIST_FILE = PropertyFinder1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -655,6 +704,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = PropertyFinder1;
+				SWIFT_OBJC_BRIDGING_HEADER = "PropertyFinder1-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
@@ -878,7 +929,7 @@
 				00E356F71AD99517003FC87E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "PropertyFinder1" */ = {
 			isa = XCConfigurationList;
@@ -887,7 +938,7 @@
 				13B07F951A680F5B00A75B9A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "PropertyFinder1-tvOS" */ = {
 			isa = XCConfigurationList;
@@ -896,7 +947,7 @@
 				2D02E4981E0B4A5E006451C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "PropertyFinder1-tvOSTests" */ = {
 			isa = XCConfigurationList;
@@ -905,7 +956,7 @@
 				2D02E49A1E0B4A5E006451C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "PropertyFinder1" */ = {
 			isa = XCConfigurationList;
@@ -914,7 +965,7 @@
 				83CBBA211A601CBA00E9B192 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

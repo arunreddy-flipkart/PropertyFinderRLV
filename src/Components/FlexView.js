@@ -4,7 +4,7 @@ import { requireNativeComponent, ViewPropTypes} from 'react-native';
 const viewProps = {
   name: 'FlexView',
   propTypes: {
-    isHorizontal: PropTypes.bool,
+    horizontal: PropTypes.bool,
     ...ViewPropTypes,
   }
 }

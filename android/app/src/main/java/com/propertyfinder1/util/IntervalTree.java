@@ -1,15 +1,9 @@
 package com.propertyfinder1.util;
 
-import android.util.Log;
-
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Map;
-import java.util.List;
 
 public class IntervalTree {
     private IntervalNode root;
-    private Map<Interval, IntervalNode> currentIntervals;
 
     public IntervalTree() {
         root = null;

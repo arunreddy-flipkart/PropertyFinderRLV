@@ -1,9 +1,5 @@
 package com.propertyfinder1.util;
 
-import androidx.annotation.Nullable;
-
-import java.util.Objects;
-
 public class Interval {
     private int start;
     private int end;
@@ -30,7 +26,7 @@ public class Interval {
     }
 
     @Override
-    public boolean equals(@Nullable Object obj) {
+    public boolean equals(Object obj) {
         Interval interval = (Interval)obj;
         return (this.start == interval.getStart() && this.end == interval.getEnd());
     }
@@ -41,17 +37,11 @@ public class Interval {
     }
 
     public boolean contains(Interval interval) {
-        if (this.start <= interval.getStart() && this.end >= interval.getEnd()) {
-            return true;
-        }
-        return false;
+        return (this.start <= interval.getStart() && this.end >= interval.getEnd());
     }
 
     public boolean intersects(Interval interval) {
-        if (this.start >= interval.getEnd() || this.end <= interval.getStart()) {
-            return false;
-        }
-        return true;
+        return !(this.start >= interval.getEnd() || this.end <= interval.getStart());
     }
 
     public int compareTo(Interval interval) {

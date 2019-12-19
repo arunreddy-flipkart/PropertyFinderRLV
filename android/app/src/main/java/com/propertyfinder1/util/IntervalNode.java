@@ -1,8 +1,8 @@
 package com.propertyfinder1.util;
 
 public class IntervalNode {
-    Interval interval;
-    IntervalNode left, right;
+    private Interval interval;
+    private IntervalNode left, right;
 
     public IntervalNode(Interval interval) {
         this.interval = interval;
