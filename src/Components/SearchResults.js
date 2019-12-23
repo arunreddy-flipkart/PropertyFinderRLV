@@ -152,7 +152,7 @@ class SearchResults extends React.Component {
               layoutProvider={this.layoutProvider}
               forceNonDeterministicRendering={true}
               itemContainer={FlexView}
-              itemContainerProps={{ horizontal : true }}
+              itemContainerProps={{ horizontal : false }}
               renderFooter={renderFooter}
             />
         </View>
